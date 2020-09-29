@@ -308,7 +308,11 @@ nav .active {
 
 #timer {
     text-align: left;
+    background-color: rgba(144, 248, 162, 0.431);
+    border: 1px solid;
+    border-radius: 3px;
     position: fixed;
+    padding: 0.3em;
     right: 0px;
-    top: 0px;
+    bottom: 0px;
 }
