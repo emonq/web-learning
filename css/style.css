@@ -1,0 +1,314 @@
+@keyframes linkhover {
+    from {
+        color: lightslategray;
+    }
+    to {
+        font-weight: lighter;
+        font-size: 200%;
+        color: lightcoral;
+        text-decoration: none;
+    }
+}
+
+@keyframes descriptionhover {
+    from {
+        visibility: visible;
+    }
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes buttonhover {
+    from {
+        background-color: aquamarine;
+        color: darkcyan;
+        border: none;
+        font-size: large;
+        padding: 1%;
+        float: right;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    to {
+        background-color: coral;
+        color:whitesmoke;
+        border: none;
+        font-size: large;
+        padding: 1%;
+        float: right;
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}
+
+* {
+    color: midnightblue;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+}
+
+.titles {
+    color: palevioletred;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    color: thistle;
+    visibility: visible;
+    text-align: center;
+}
+
+.description:hover{
+    animation: descriptionhover 1s;
+}
+
+hr {
+    border: none;
+    border-top: palevioletred 5px solid;
+}
+
+a:link,a:visited{
+    color: lightslategray;
+    text-decoration: none;
+}
+
+a.animation:hover {
+    animation: linkhover 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+a:active {
+    color: white
+}
+
+main {
+    background-color: rgb(243, 243, 243);
+    margin: 0 10% 0 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    text-align: start;
+    flex-wrap: wrap;
+    border-style: ridge;
+}
+
+footer {
+    text-align: center;
+}
+
+header {
+    margin: 0;
+}
+
+nav {
+    top: 0;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #bbb;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: blanchedalmond;
+}
+
+nav li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+    background-color: lavenderblush;
+}
+
+nav .active {
+    background-color: cornsilk;
+}
+
+.question-form {
+    margin: 0 10% 0 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    background-color: aliceblue;
+    border: 1px ridge;
+}
+
+.question-head {
+    font-size: large;
+    font-weight: bold;
+}
+
+.question-seq {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.question-body {
+    font-size: medium;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    margin: 0;
+}
+
+.question-body ul {
+    margin: 0;
+    padding-left: 0;
+}
+
+.question-required {
+    font-size: medium;
+    color: red;
+}
+
+.question {
+    margin-right: 15%;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.question-content {
+    width: 100%;
+}
+
+.question.illegal .question-content,.question.error .question-content {
+    border: 2px solid  rgba(209, 151, 151, 0.472);
+    border-radius: 5px;
+}
+
+.question.WA .question-content {
+    border: 2px solid  rgba(209, 151, 151, 0.472);
+    border-radius: 5px;
+    background-color: rgba(209, 151, 151, 0.472);
+}
+
+#submit-button {
+    color: aliceblue;
+    border-radius: 5px;
+    border: none;
+    font-size: large;
+    padding: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    float: right;
+    margin-right: 15%;
+    text-align: center;
+}
+
+#submit-button:disabled {
+    background-color: darkgrey;
+
+}
+
+:disabled:hover {
+    cursor: not-allowed;
+}
+
+#submit-button:enabled {
+    background-color: aquamarine;
+    color: darkcyan;
+}
+
+#submit-button:enabled:hover {
+    animation: buttonhover 0.5s;
+    background-color: coral;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+.question-info {
+    visibility: hidden;
+    background-color: lightblue;
+    border-radius: 5px;
+    width: 10%;
+    margin: 1%;
+    text-align: center;
+    padding: 1em;
+}
+
+.question-info.AC {
+    visibility: visible;
+}
+
+.question-info.WA {
+    visibility: visible;
+    background-color: burlywood;
+}
+
+.question input[type="text"] {
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid gray;
+    height: 3em;
+}
+
+#warnmsg {
+    padding-left: 15%;
+    color: red;
+}
+
+#testinfo {
+    width: 100%;
+    text-align: center;
+}
+
+#currentTime {
+    text-align: center;
+}
+
+#scoreboard {
+    width: 100%;
+    text-align: center;
+    border: 1px solid darkblue;
+}
+
+#scoreboard th {
+    background-color: burlywood;
+    padding: 1em;
+    font-size: large;
+}
+
+#scoreboard tr {
+    line-height: 5em;
+}
+
+#scoreboard tr:nth-child(odd) {
+    background-color: beige;
+}
+
+#scoreboard tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+#timer {
+    text-align: left;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+}

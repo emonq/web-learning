@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>在线测试</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="./resources/icons/onlinetest.ico">
+        <script src="./scripts/script.js"></script>
+    </head>
+    <body onload="greeting();" style="visibility: hidden;">
+        <div id="timer"></div>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="./aboutme.html">About</a></li>
+                    <li><a href=".">Home</a></li>
+                    <li><a class="active" href="#">Test</a></li>
+                    <li><a href="./scoreboard.aspx">Score</a></li>
+                </ul>
+            </nav>
+            <h1 class="titles">近代史测试</h1>
+            <p class="description">一个简单的测试，总分100分，每题25分，均为必答题。</p>
+        </header>
+        <form id="question-form" class="question-form" action="./checktest.aspx" method="POST" onsubmit="return submitForm();">
+            <a href="./scoreboard.aspx"></a>
+            <div id="testinfo" style="visibility: hidden;"></div>
+            <div class="question" id="username">
+                <div class="question-info">
+                </div>
+                <div class="question-content">
+                    <div class="question-head">
+                        <span class="question-seq">00.</span>
+                        <span class="question-required">*</span>
+                        <span class="text">您的名字：</span>
+                    </div>
+                    <div class="question-body">
+                        <div>
+                            <input type="text" name="username" placeholder="姓名">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="question" id="q01">
+                <div class="question-info" id="info01">
+                    <span class="state"></span>
+                    <span class="score"></span>
+                </div>
+                <div class="question-content">
+                    <div class="question-head">
+                        <span class="question-seq">01.</span>
+                        <span class="question-required">*</span>
+                        <span class="text">1978年召开的中共十一届三中全会被认为是新中国成立后的一次“伟大转折”，以下哪项不是此次会议的内容：</span>
+                    </div>
+                    <div class="question-body">
+                        <ul>
+                            <div>
+                                <label><input type="radio" value="a" name="q01"> a. 实现了思想路线的拨乱反正</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="b" name="q01"> b. 作出了实行改革开放的新决策</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="c" name="q01"> c. 审查和纠正了过去对彭德怀等同志所作的错误结论</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="d" name="q01"> d. 通过《关于建国以来党的若干历史问题的决议》</label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="question" id="q02">
+                <div class="question-info" id="info02">
+                    <span class="state"></span>
+                    <span class="score"></span>
+                </div>
+                <div class="question-content">
+                    <div class="question-head">
+                        <span class="question-seq">02.</span>
+                        <span class="question-required">*</span>
+                        <span class="text">毛泽东：“我所说的中国革命高潮快要到来，决不是如有些人所谓‘有到来之可能’那样完全没有行动意义的、可望而不可即的一种空的东西。它是站在海岸遥望海中已经看得见桅杆尖头了的一只航船，它是立于高山之巅远看东方已见光芒四射喷薄欲出的一轮朝日，它是躁动于母腹中的快要成熟了的一个婴儿。”（1930年，《星星之火，可以燎原》）这段话是针对当时党内和红军中存在的：</span>
+                    </div>
+                    <div class="question-body">
+                        <ul>
+                            <div>
+                                <label><input type="radio" value="a" name="q02"> a. “御敌于国门之外”的主张</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="b" name="q02"> b. “在全国范围内先争取群众后建立政权”的理论</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="c" name="q02"> c. “红旗到底打得多久”的疑问</label>
+                            </div>
+                            <div>
+                                <label><input type="radio" value="d" name="q02"> d. “一省或数省的首先胜利”的设想</label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="question" id="q03">
+                <div class="question-info" id="info03">
+                    <span class="state"></span>
+                    <span class="score"></span>
+                </div>
+                <div class="question-content">
+                    <div class="question-head">
+                        <span class="question-seq">03.</span>
+                        <span class="question-required">*</span>
+                        <span class="text">（多选）毛泽东强调，在社会主义革命和建设时期，要进行马克思主义基本原理同中国实际的“第二次结合”。以下哪项是“第二次结合”的成果：</span>
+                    </div>
+                    <div class="question-body">
+                        <ul>
+                            <div>
+                                <label><input type="checkbox" value="a" name="q03" oninput="change(this)"> a. 中国特色社会主义理论体系的形成</label>
+                            </div>
+                            <div>
+                                <label><input type="checkbox" value="b" name="q03"> b. “三大改造”的基本完成</label>
+                            </div>
+                            <div>
+                                <label><input type="checkbox" value="c" name="q03"> c. 毛泽东思想的发展</label>
+                            </div>
+                            <div>
+                                <label><input type="checkbox" value="d" name="q03"> d. 邓小平理论的形成</label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="question" id="q04">
+                <div class="question-info" id="info04">
+                    <span class="state"></span>
+                    <span class="score"></span>
+                </div>
+                <div class="question-content">
+                    <div class="question-head">
+                        <span class="question-seq">04.</span>
+                        <span class="question-required">*</span>
+                        <span class="text">（填空）1840年鸦片战争以后，中国遭受西方列强"坚船利炮"的欺凌不断加深，中华民族面临生死存亡的形势也日益严峻，中国"睡狮"在西方列强的隆隆炮声中渐渐苏醒。促使中国人民的民族意识开始普遍觉醒的重大事件是：</span>
+                    </div>
+                    <div class="question-body">
+                        <div>
+                            <input type="text" name="q04" placeholder="请输入你的答案">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div style="visibility: hidden;"><span id="warnmsg">请完成所有题目后再提交！</span></div>
+                <button id="submit-button">提交</button>
+                <a id="viewhistory" href="./submithistory.aspx?username=">查看提交历史</a>
+            </div>
+        </form>
+        <footer>
+            <p id="currentTime"></p>
+        </footer>
+    </body>
+</html>
